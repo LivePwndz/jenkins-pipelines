@@ -11,4 +11,17 @@ pipeline {
             }
         }
     }
+	
+	post{
+		always{
+			bat 'echo "Hello there, pipeline done"';
+		}
+		success{
+			bat 'echo "Hello there, pipeline success"';
+		}
+		
+		failure{
+			bat 'echo "Hello there, pipeline failure"';
+		}
+	}
 }
