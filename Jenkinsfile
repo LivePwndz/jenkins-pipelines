@@ -13,7 +13,7 @@ pipeline {
 		stage('deplo') {
 			steps {
 				input "Continue to deployment?"
-				bat 'Deployment done.'
+				bat 'echo Deployment done.'
 			}
 		}
     }
