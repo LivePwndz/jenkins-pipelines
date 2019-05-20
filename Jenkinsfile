@@ -4,6 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'set'
+				bat '''
+                    echo "Multiline shell steps works too"
+                    dir
+                '''
             }
         }
     }
