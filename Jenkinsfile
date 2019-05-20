@@ -10,14 +10,15 @@ pipeline {
                 '''
             }
         }
+		stage('deplo') {
+			input "Continue to deployment?"
+			bat 'Deployment done.'
+		}
     }
 	
 	post{
 		always{
 			bat 'echo "Hello there, pipeline done"';
-			mail to: 'pwndz172@gmail.com',
-				subject: "Jenkins Pipeline Status",
-				body: "A pipeline ran and here we are"
 		}
 		success{
 			bat 'echo "Hello there, pipeline success"';
