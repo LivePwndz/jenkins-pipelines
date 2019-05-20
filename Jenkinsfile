@@ -11,8 +11,10 @@ pipeline {
             }
         }
 		stage('deplo') {
-			input "Continue to deployment?"
-			bat 'Deployment done.'
+			steps {
+				input "Continue to deployment?"
+				bat 'Deployment done.'
+			}
 		}
     }
 	
